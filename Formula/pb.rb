@@ -3,8 +3,8 @@ class Pb < Formula
 
   desc "Index your projects and see which ones have gone stale"
   homepage "https://github.com/noodles/ProjectBoss"
-  url "https://github.com/noodles/ProjectBoss/archive/refs/tags/v2026.09.2.tar.gz"
-  sha256 "0c55de0046ba012586e3ad99ae8da037bdc437f0c6341a6065003ce05a85450d"
+  url "https://github.com/noodles/ProjectBoss/archive/refs/tags/v2026.09.3.tar.gz"
+  sha256 "b074fbccc3e876411b6ad7f1e013d5519a5bcca12a6cc1e935d2d8d8b031bc74"
   license "MIT"
   head "https://github.com/noodles/ProjectBoss.git", branch: "main"
 
