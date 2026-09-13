@@ -1,6 +1,8 @@
-class Pb < Formula
+class Projectboss < Formula
   include Language::Python::Shebang
 
+  # Named projectboss, not pb: `brew install pb` resolves to an unrelated
+  # Pushbullet cask. The command this installs is still `pb`.
   desc "Index your projects and see which ones have gone stale"
   homepage "https://github.com/noodles/ProjectBoss"
   url "https://github.com/noodles/ProjectBoss/archive/refs/tags/v2026.09.4.tar.gz"
