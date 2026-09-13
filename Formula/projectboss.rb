@@ -30,6 +30,7 @@ class Projectboss < Formula
       directory, which a command cannot do on its own. Add the function:
 
         echo 'source #{opt_pkgshare}/pb.zsh' >> ~/.zshrc
+        source ~/.zshrc
 
       Everything else works without it.
 
