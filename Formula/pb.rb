@@ -8,8 +8,8 @@ class Pb < Formula
   license "MIT"
   head "https://github.com/noodles/ProjectBoss.git", branch: "main"
 
-  depends_on "python@3.13"
   depends_on :macos # shells out to `open` and `pbpaste`
+  depends_on "python@3.13"
 
   def install
     # Pure stdlib, so there is nothing to build and nothing to vendor.
@@ -44,13 +44,12 @@ class Pb < Formula
     # A fresh run with no terminal must not hang waiting for setup answers.
     ENV["HOME"] = testpath
     assert_equal "[]", shell_output("#{bin}/pb list --json").chomp
-    refute_predicate testpath/".pb/config.json", :exist?,
-                     "a non-interactive run should not write a config"
+    refute_path_exists testpath/".pb/config.json"
 
     system bin/"pb", "new", "--name", "Brew Test", "-c", "Work",
                      "-s", "created by brew test", "--no-notes",
                      "--no-remote", "--no-adr"
-    assert_predicate testpath/"Projects/Work/brew-test/README.md", :exist?
+    assert_path_exists testpath/"Projects/Work/brew-test/README.md"
     assert_match "Brew Test", shell_output("#{bin}/pb list --json")
   end
 end
